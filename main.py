@@ -4,9 +4,6 @@ import urllib.request
 from selenium.webdriver.common.action_chains import ActionChains
 
 class InstaBot:
-    # def __init__(self):
-    #     self.driver = webdriver.Chrome()
-
     def __init__(self, username, pw):
         self.driver = webdriver.Chrome()
         self.username = username
@@ -46,8 +43,8 @@ class InstaBot:
             sleep(2)
             self.driver.find_element_by_xpath("//a[@class=' _65Bje  coreSpriteRightPaginationArrow']").click()
 
-
-
-my_bot = InstaBot('<Enter Your USERNAME HERE>', '<Enter your PASSWORD HERE>')
-# my_bot = InstaBot()
-my_bot.search("<Enter the Username HERE>")
+username = input("Enter Your Username")
+pass = input("Enter Your Password")
+usearch = input("Enter Username of the person to be searched")
+my_bot = InstaBot(username, pass)
+my_bot.search(usearch)
